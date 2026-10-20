@@ -4,7 +4,8 @@ A tiny native Windows tray app (Rust, ~100 KB) that toggles
 **Settings → System → Multitasking → Snap windows** with one click.
 
 - **Left-click** tray icon → Snap windows ON/OFF (colour icon = on, grey icon with red slash = off)
-- **Right-click** → menu: toggle, open Multitasking settings, *Start with Windows*, Exit
+- **Keybind / Global Hotkey** → Toggle anywhere with a customizable combination (e.g. `Win + Alt + S`, `Ctrl + Shift + S`)
+- **Right-click** → menu: toggle, configure keybind, open Multitasking settings, *Start with Windows*, Exit
 - Auto-starts at login (HKCU\...\Run, no admin needed); opt out from the menu
 - Single instance, survives Explorer restarts, syncs if you change it in Settings
 
