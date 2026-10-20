@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" width="760" height="256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6C5CE7"/>
+      <stop offset="1" stop-color="#00D2FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#g)"/>
+  
+  <g fill="#fff" fill-opacity=".96">
+    <rect x="44" y="56" width="78" height="144" rx="14"/>
+    <rect x="134" y="56" width="78" height="66" rx="14"/>
+    <rect x="134" y="134" width="78" height="66" rx="14"/>
+  </g>
+  <text x="280" y="150" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="92" font-weight="700" fill="#6C5CE7">Snap<tspan fill="#00B8E6">Toggle</tspan></text>
+  <text x="284" y="196" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="26" fill="#8A8FA3" letter-spacing="2">WINDOWS SNAP, ONE CLICK</text>
+</svg>
