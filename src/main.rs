@@ -680,8 +680,7 @@ unsafe fn tray(hwnd: HWND, action: u32, on: bool) {
         _ => String::new(),
     };
 
-    let tip = if on {
-        format!("SnapToggle{}", hotkey_str)
+    let tip = format!("SnapToggle{}", hotkey_str);
     for (i, c) in tip.encode_utf16().take(127).enumerate() {
         n.szTip[i] = c;
     }
