@@ -681,10 +681,7 @@ unsafe fn tray(hwnd: HWND, action: u32, on: bool) {
     };
 
     let tip = if on {
-        format!("SnapToggle{} - Snap windows: ON (click to turn off)", hotkey_str)
-    } else {
-        format!("SnapToggle{} - Snap windows: OFF (click to turn on)", hotkey_str)
-    };
+        format!("SnapToggle{}", hotkey_str)
     for (i, c) in tip.encode_utf16().take(127).enumerate() {
         n.szTip[i] = c;
     }
@@ -732,16 +729,16 @@ unsafe fn show_menu(hwnd: HWND) {
     let on = snap_enabled();
 
     let check = |b: bool| if b { MF_CHECKED } else { MF_UNCHECKED };
-    let t_toggle = wide(if on { "Snap windows: On" } else { "Snap windows: Off" });
+    let t_toggle = wide(if on { "Windows Snap: On" } else { "Windows Snap: Off" });
 
     let current_hotkey = load_hotkey();
     let hotkey_label = match current_hotkey {
-        Some(h) if h.vk != 0 => format!("Change Keybind ({})", h.display()),
+        Some(h) if h.vk != 0 => format!("Keybind ({})", h.display()),
         _ => "Set Keybind...".to_string(),
     };
     let t_hotkey = wide(&hotkey_label);
-    let t_settings = wide("Open Multitasking settings");
-    let t_auto = wide("Start with Windows");
+    let t_settings = wide("Setting");
+    let t_auto = wide("Start Up");
     let t_exit = wide("Exit");
 
     AppendMenuW(menu, MF_STRING | check(on), ID_TOGGLE, t_toggle.as_ptr());
